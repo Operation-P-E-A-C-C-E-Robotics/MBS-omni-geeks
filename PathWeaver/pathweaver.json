@@ -1,0 +1,9 @@
+{
+  "lengthUnit": "Inch",
+  "exportUnit": "Same as Project",
+  "maxVelocity": 100.0,
+  "maxAcceleration": 100.0,
+  "trackWidth": 17.0,
+  "gameName": "MockBuild",
+  "outputDir": "../src/main/deploy"
+}

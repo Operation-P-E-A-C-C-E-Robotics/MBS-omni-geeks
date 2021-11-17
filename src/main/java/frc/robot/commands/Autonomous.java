@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj2.command.Subsystem;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Limelight;
-import frc.robot.subsystems.shooter;
+import frc.robot.subsystems.Shooter;
 
 public class Autonomous extends CommandBase {
   /** Creates a new Autonomous. */
@@ -103,7 +103,7 @@ public void moveOffLine() {
   Intake.Enable();
  }
  
- /*
+ 
  if(Timer.getMatchTime() < 7) {
   DriveTrain.autodrive(-0.5, -0.5);
  }
@@ -125,27 +125,15 @@ public void moveOffLine() {
  if(Timer.getMatchTime() < 3.9) {
   DriveTrain.autodrive(-0.5, -0.5);
  }
- if(Timer.getMatchTime() < 3.85) {
-  DriveTrain.autodrive(0.75, 0.75);
+  if(Timer.getMatchTime() < 10) {
+  Intake.intake.set(-1);
  }
- if(Timer.getMatchTime() < 3.8) {
+  if(Timer.getMatchTime() < 5) {
   DriveTrain.autodrive(-0.5, -0.5);
-}
-if(Timer.getMatchTime() < 3.75) {
-  DriveTrain.autodrive(0.75, 0.75);
-}
-if(Timer.getMatchTime() < 3.7) {
-  DriveTrain.autodrive(-0.5, -0.5);
-}
-if(Timer.getMatchTime() < 3.65) {
-  DriveTrain.autodrive(0.75, 0.75);
-} 
-if(Timer.getMatchTime() < 3.6) {
-  DriveTrain.autodrive(-0.5, -0.5);
-}
+  Intake.intake.set(0);
+  Shooter.shoot_motor.set(0);
 
-if(Timer.getMatchTime() < 3.55) {
-  DriveTrain.autodrive(0.75, 0.75);
+  }
 }
 
 if(Timer.getMatchTime() < 3.5) {
@@ -158,5 +146,4 @@ if(Timer.getMatchTime() < 3.4) {
   DriveTrain.autodrive(-0.5, -0.5);
 }
 */
-}
 }

@@ -5,10 +5,8 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.controller.RamseteController;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.Subsystem;
-import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.Limelight;
@@ -105,6 +103,7 @@ public void moveOffLine() {
   Intake.Enable();
  }
  
+ /*
  if(Timer.getMatchTime() < 7) {
   DriveTrain.autodrive(-0.5, -0.5);
  }
@@ -158,5 +157,6 @@ if(Timer.getMatchTime() < 3.45) {
 if(Timer.getMatchTime() < 3.4) {
   DriveTrain.autodrive(-0.5, -0.5);
 }
+*/
 }
 }

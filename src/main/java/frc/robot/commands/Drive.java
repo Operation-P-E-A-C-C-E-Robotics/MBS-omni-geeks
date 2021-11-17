@@ -41,7 +41,7 @@ public class Drive extends CommandBase {
     //m_robotDrive.arcadeDrive(m_stick.getY(), m_stick.getX());
     x = -m_stick.getX();
     y = -m_stick.getY();
-   dt.teledrive(y, x);
+    DriveTrain.teledrive(y, x);
 
   }
 

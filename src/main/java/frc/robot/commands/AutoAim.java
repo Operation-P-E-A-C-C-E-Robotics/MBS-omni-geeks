@@ -29,22 +29,22 @@ public class AutoAim extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double short_length = camera.getTargetShortSidelength();
-    double offset = camera.getTargetOffsetX();
+    //double short_length = camera.getTargetShortSidelength();
+    double offset = Limelight.getTargetOffsetX();
 
     double rot = offset * rotationP;
-    double drv = short_length / foc_len - targ_dist;
+    //double drv = short_length / foc_len - targ_dist;
 
     SmartDashboard.putNumber("offset", offset);
     SmartDashboard.putNumber("rotation out", rot);
 
-    driveTrain.teledrive(0, rot);
+    DriveTrain.teledrive(0, rot);
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    driveTrain.teledrive(0, 0);
+    DriveTrain.teledrive(0, 0);
   }
 
   // Returns true when the command should end.

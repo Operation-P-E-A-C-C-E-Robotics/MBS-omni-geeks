@@ -6,9 +6,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
-//import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
-import frc.robot.commands.AutoAim;
 import frc.robot.commands.Autonomous;
 import frc.robot.commands.BallHandelling;
 import frc.robot.commands.Drive;
@@ -17,8 +15,6 @@ import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.shooter;
 import edu.wpi.first.wpilibj2.command.Command;
-//import edu.wpi.first.wpilibj2.command.Subsystem;
-//import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 
@@ -38,12 +34,10 @@ public class RobotContainer {
   private final shooter m_shooter = new shooter();
   private final Intake m_intake = new Intake();
   private final BallHandelling m_intakeCommand = new BallHandelling();
-  //private final Command m_shootCommand = new shoot(m_shooter);
   private Joystick m_joystick = new Joystick(0);
   private JoystickButton shootButton = new JoystickButton(m_joystick, 2);
-  //private JoystickButton aimButton = new JoystickButton(m_joystick, 3);
   private JoystickButton intakeButton = new JoystickButton(m_joystick, 1);
-  private JoystickButton ejecButton = new JoystickButton(m_joystick, 5);
+  
 
 
 
